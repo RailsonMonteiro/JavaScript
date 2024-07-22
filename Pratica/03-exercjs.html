@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script lang="JavaScript">
+        function Salvar()
+        {
+            let Nome = document.getElementById("iNome").value;
+            let Mail = document.getElementById("iEmail").value;
+            document.getElementById('pSalvar').innerHTML = "Nome: " +Nome+"<br> E-mail: "+Mail;
+            
+            return null
+        }
+        function Limpar()
+        {
+            document.getElementById('pSalvar').innerHTML = "";
+        }
+
+    </script>
+</head>
+<body>
+
+    <h1>Pagina Inicial</h1>
+    <br>
+    <label for="iNome">Nome:</label>
+    <input type="text" name="iNome" id="iNome">
+    <label for="iEmail">E-mail:</label>
+    <input type="email" name="iEmail" id="iEmail">
+    <button onclick="Salvar()">Salvar</button>&nbsp;
+    <button onclick="Limpar()">Limpar</button>
+    <p id="pSalvar" style="color: #6d3c00;font-weight: bold;"></p>
+    
+</body>
+</html>
