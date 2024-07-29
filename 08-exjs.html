@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faixas Etárias</title>
+    <script>
+        function FaixaEtaria(nome, idade, resultado) {
+            let vNome = document.getElementById(nome).value;
+            let vIdade =parseInt(document.getElementById(idade).value);
+            vFaixa = "criança";
+            if (vIdade <= 12){
+
+            } else if (vIdade > 12 && vIdade <= 17) {
+                vFaixa = "adolecente."
+            } else if (vIdade > 17 && vIdade <= 64) {
+                vFaixa = "adulto."
+            } else {
+                vFaixa = "idoso.";
+            }
+            document.getElementById(resultado).innerText = "Olá "+vNome+" você tem "+vIdade+" anos e é "+vFaixa;
+        }
+    </script>
+</head>
+<body>
+    <h1>Faixas Etárias</h1>
+    <!--  infantil (0-12 anos)
+        , adolescente (13-17 anos)
+        , adulto (18-64 anos) 
+        e idoso (65+ anos). -->
+        <label for="iNome">Nome</label>
+        <input type="text" name="iNome" id="iNome">
+        <br>
+        <br>
+        <label for="iIdade">Idade</label>
+        <input type="text" name="iIdade" id="iIdade">
+        <br>
+        <br>
+        <button onclick="FaixaEtaria('iNome','iIdade','pResultado')">Consultar Faixa Etárias</button>
+        <br>
+        <p id="pResultado"></p>
+    
+</body>
+</html>

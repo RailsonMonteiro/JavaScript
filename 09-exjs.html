@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function par(numero) {
+            if ((numero % 2) == 0 ) {
+                return true
+            }else {
+                return false
+            }
+        }
+        function Listar(numero) {
+            let listagem = "";
+            for(i=0;i<=numero;i++) {
+                listagem += i+"\n";
+            }
+            document.getElementById('tResultado').innerHTML = listagem;
+        }
+        function ListarPares(numero) {
+            let listagem = ""
+            for (i=0;i<=numero;i++){
+                if (par(i)){
+                listagem += i + "<br>";
+                }
+            }
+            document.getElementById('pResultado').innerHTML = listagem;
+        }
+    </script>
+</head>
+<body>
+    <h1>Exemplo de FOR</h1>
+    <h2>Listagem de numeros sequenciais</h2>
+    <label for="iNumero">Informe até que numero será listado:</label>
+    <input type="text" size="4" name="iNumero" id="iNumero">
+    <br><br>
+    <button onclick="Listar(document.getElementById('iNumero').value)">
+        Listar</button>
+    &nbsp;
+    <button onclick="ListarPares(document.getElementById('iNumero').value)">
+        ListarPares</button>
+    <br>
+    <p id="pResultado"></p>
+</body>
+</html>
